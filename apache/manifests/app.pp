@@ -4,7 +4,7 @@ class apache::app {
         owner  => root,
         group  => root,
         mode   => '755',
-        source => 'puppet:///modules/apache/index.html'
+        source => 'puppet:///modules/apache/index.html',
         require => Class["apache::httpd"],
     }
-}
+}s
