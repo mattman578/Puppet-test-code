@@ -1,0 +1,11 @@
+Listen <%= @httpd_port %>
+NameVirtualHost *:<%= @httpd_port %>
+<VirtualHost *:<%= @httpd_port %>>
+  DocumentRoot /var/www/vhost/
+  ServerName <%= @fqdn %>
+  <Directory "/var/www/vhost/">
+    Options All Indexes FollowSymLinks
+    Order allow,deny
+    Allow from all
+  </Directory>
+</VirtualHost>
